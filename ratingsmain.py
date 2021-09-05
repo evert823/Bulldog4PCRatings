@@ -97,7 +97,7 @@ if begindate[:4] == "9999":
     begindate = "19700101 00:00"
 
 for p in MyPlayerList.Players:
-    MyRatingRecordList.ModifyRating(p.UserName, 1200, begindate)
+    MyRatingRecordList.ModifyRating(p.UserName, MyRatingFloor.InitialRating, begindate)
 
 for g in MyGameList.Games:
     if g.GameResultValid == True:
